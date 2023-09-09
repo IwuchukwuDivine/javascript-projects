@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #cf9aff, #95c0ff);
+  color: white;
+  padding: 40px 40px 0 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+.header > img {
+  width: 60px;
+}
+.create-btn {
+  border: none;
+  color: white;
+  background: linear-gradient(#9418fd, #571094);
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.create-btn > img {
+  width: 25px;
+  cursor: pointer;
+}
+.input-box {
+  background-color: white;
+  max-width: 500px;
+  min-height: 150px;
+  margin: 20px 0;
+  border-radius: 5px;
+  position: relative;
+  padding: 20px;
+  outline: none;
+  color: #333;
+}
+.delete-button {
+  width: 25px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+
+
+@media (max-width: 700px) {
+  .header {
+    justify-content: center;
+  }
+  section {
+    display: grid;
+    place-items: center;
+  }
+  .notes-container {
+    grid-template-columns: 400px;
+  }
+}
+
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .notes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
